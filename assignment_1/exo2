@@ -1,0 +1,21 @@
+% Author Name: [Matthew Bogush]
+% Email: [bogush26@rowan.edu]
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Homework 1
+% Date: [9/20/24]
+
+% 2 Temperature Converter
+
+%ask user for an input of a value of celcius
+celsius = input('Enter a temperature in Celsius');
+
+%convert the user's celcius input to fahrenheit
+fahrenheit = (celsius*9/5)+32;
+
+%display the conversion to fahrenheit
+disp([num2str(celsius), ' degrees Celsius is equal to ', num2str(fahrenheit), ' degrees Fahrenheit']);
+
+% If Fahrenheit is greater than 100, display "It's a hot day!"
+if fahrenheit > 100
+    disp("It's a hot day!")
+end
