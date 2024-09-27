@@ -1,0 +1,38 @@
+% Author Name: [Matthew Bogush]
+% Email: [bogush26@rowan.edu]
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Homework 1
+% Date: [9/20/24]
+
+% 4 Number Guessing Game
+
+%generate a random number from 1 to 100
+secretNumber = randi(100);
+
+%set guessCount to 0 to prepare for while loop
+guessCount = 0;
+
+%give the user 100 attempts to guess the secret number
+while guessCount < 99
+    %increase the value of the guessCount for every attempt
+    guessCount = guessCount + 1;
+
+    %prompt the user for their guess, and save it to the guess variable to compare to later
+    guess = input('Guess a number from 0 to 100');
+
+    %compare the user's guess to the secret number
+    %if their guess is correct, congratulate them and display the guessCount and the secret number
+    %then end the while loop by adding 99 to guessCount
+    if guess == secretNumber
+        disp(['Congratulations! after ', num2str(guessCount), ' guesses you have guessed the secret number: ' num2str(secretNumber)]);
+        guessCount = guessCount + 99;
+
+    %if the user's guess is too high, give them a hint
+    elseif guess > secretNumber
+        disp('Incorrect, your guess is too high');
+
+    %if the user's guess is too low, give them a hint
+    elseif guess < secretNumber
+        disp('Incorrect, your guess is too low');
+    end
+end
