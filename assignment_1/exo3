@@ -1,0 +1,35 @@
+% Author Name: [Matthew Bogush]
+% Email: [bogush26@rowan.edu]
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Homework 1
+% Date: [9/20/24]
+
+% 3 Grocery Shopping Calculator
+
+%generate prices for the five food items
+apple = 1;
+banana = .75;
+chicken = 12;
+bread = 6;
+potato = 4;
+
+%take input from the user and save the amount of each food item they would like to purchase
+appleCount = input('How many apples would you like to buy?');
+bananaCount = input('How many bananas would you like to buy?');
+chickenCount = input('How much chicken would you like to buy?');
+breadCount = input('How much bread would you like to buy?');
+potatoCount = input('How many potatos would you like to buy?');
+
+%calculate the total cost by multiplying the individual item costs and the
+%count that the user is purchasing, then sum the prices of each item group
+total = apple*appleCount + banana*bananaCount + chicken*chickenCount + bread*breadCount + potato*potatoCount;
+
+%display the user's total
+disp(['Your total is $' num2str(total)]);
+
+%give the user a 10% discount if their order is greater than $50
+if total > 50
+    dicountTotal = .9*total;
+    disp('Because your total is greater than $50 you have a 10% discount!');
+    disp(['Your discounted total is $' num2str(dicountTotal)]);
+end
