@@ -1,0 +1,12 @@
+%Request user input for string to encypt (all lowercase)
+message = input('Enter your message that you would like to encrypt (all lowercase):', 's');
+
+%Request user input for shift value (1-25)
+shift = input('Enter a shift value (1-25): ');
+
+%call cipher function with the user's message and shift
+a_m = caesar_cipher(message, shift);
+
+%Print the Original and encrypted messages
+fprintf('Original message: %s\n', message);
+fprintf('Encrypted message: %s\n', a_m);
