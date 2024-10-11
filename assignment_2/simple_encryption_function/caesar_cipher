@@ -1,0 +1,23 @@
+% Author Name: [Matthew Bogush]
+% Email: [bogush26@rowan.edu]
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Assignment 2
+% Task: [Simple Encryption Function]
+% Date: [10/11/24]
+
+%Create function a_m
+function a_m = caesar_cipher(message, shift)
+    %Set message string to double
+    a_m = double(message);
+    %shift the values by the user's shift
+    a_m = a_m + shift;
+    %If the value goes past or below the alphabet, loop the value back into the 26 letters
+    for i=1:length(message)
+      if a_m(i) > 122
+          a_m(i) = a_m(i) - 26;
+      end
+      if a_m(i) < 97
+          a_m(i) = a_m(i) + 26;
+      end
+    end
+end
