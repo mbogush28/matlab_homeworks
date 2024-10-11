@@ -1,0 +1,5 @@
+Stock Market Analysis Summary
+Average closing price: $ 519.040333 
+Highest closing price: $ 530.540000 
+Lowest closing price: $ 496.640000 
+Days with higher closing price than previous day: 17 
