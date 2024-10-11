@@ -1,0 +1,23 @@
+% Author Name: [Matthew Bogush]
+% Email: [bogush26@rowan.edu]
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Assignment 2
+% Task: [Population Growth Analysis]
+% Date: [10/11/24]
+
+%Create a row vector 'population' with the given data
+population = [5000, 5200, 5350, 5600, 5800];
+
+%Calculate the growth rate for every year; first year's growth rate is zero
+growth_rate = [0, (population(2:end) - population(1:end-1)) ./ population(1:end-1)];
+
+%Combine the vectors into a matrix
+pop_data = [population; growth_rate];
+
+%Print titles for the chart
+fprintf('Population\tGrowth Rate\n');
+
+%Print data from each vector, using i as the indicator to take pieces of data from each vector
+for i = 1:length(population)
+    fprintf('%d\t\t%.2f\n', population(i), growth_rate(i));
+end
